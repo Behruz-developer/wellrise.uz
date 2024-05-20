@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asstets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Willrise.uz</title>
+</head>
+
+<body>
+  <header class="header" id="home">
+    <nav class="nav">
+      <div class="container">
+        <div class="nav_box">
+          <a href="#home" class="logo">
+            <img src="./asstets/images/logo.png" alt="">
+          </a>
+          <label class="open_btn" for="check"><i class="  fa fa-bars"></i></label>
+
+          <ul class="nav_list">
+            <label class="close_btn"><i class="fa fa-close"></i></label>
+            <li><a href="#about" class="nav_link">О нас </a></li>
+            <li><a href="#category" class="nav_link">Категории</a></li>
+            <li><a href="#comand" class="nav_link">НАША КОМАНДА</a></li>
+            <li><a href="#news" class="nav_link">Новости</a></li>
+            <li><a href="#product" class="nav_link">продукты</a></li>
+            <div class="language-selector">
+              <div class="selector_box" onclick="toggleDropdown()">
+                <div class="selected">UZ </div>
+                <label class="globe" for="check"><i class="  fa fa-globe"></i></label>
+              </div>
+              <div class="options" id="languageOptions" style="display: none;">
+                <div class="option" onclick="selectLanguage('UZ')">UZ</div>
+                <div class="option" onclick="selectLanguage('EN')">EN</div>
+                <div class="option" onclick="selectLanguage('RU')">RU</div>
+              </div>
+            </div>
+            <a href="tel:" class="nav_contact">Contact</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main-carousel" id="home">
+      <div class="carousel">
+        <div class="items">
+          <div class="img_card carousel-image current">
+            <img src="asstets/images/bg-2.png" alt="" class=" " />
+            <div class="img_text">
+              <h3 class="lang" key="navimage1"> ВАКЦИНАЦИЯ ЖИВОТНЫХ</h3>
+            </div>
+          </div>
+
+          <div class="img_card carousel-image ">
+            <img src="asstets/images/bg-1.jpg" alt="" class=" " />
+            <div class="img_text">
+              <h3 class="lang" key="navimage2">ПРОФИЛАКТИКА БОЛЕЗНЕЙ</h3>
+            </div>
+          </div>
+
+          <div class="img_card carousel-image ">
+            <img src="asstets/images/bg-3.jpg" alt="" class=" " />
+            <div class="img_text">
+              <h3 class="lang" key="navimage3">ЗДОРОВЬЕ ЖИВОТНЫХ</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <i class="fa fa-chevron-left fa-3x" id="prevBtn"></i>
+        <i class="fa fa-chevron-right fa-3x" id="nextBtn"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about_box">
+          <div class="about_card1">
+            <h5 class="about_title">О нас </h5>
+            <img class="about_img" src="./asstets/images/about.png" alt="">
+          </div>
+          <div class="about_card2">
+            <p class="about_text1">Вакцинация животных — это ключевой метод профилактики болезней и защиты здоровья как
+              самих животных, так и людей от зоонозных инфекций
+            </p>
+            <p class="about_text2">
+              Как ваш партнер, VVC понимает, что все фермы разные, и стремится удовлетворить ваши потребности.
+              индивидуальные потребности, чтобы улучшить каждое стадо в целом.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about_bottom"></section>
+    <section class="category" id="category">
+      <div class="container">
+        <div class="title_card">
+          <h2 class="title">Категории</h2>
+          <a class="link" href="#!">Смотреть все <img src="./asstets/images/prev.svg" alt=""></a>
+        </div>
+        <div class="category_box">
+          <div class="category_card">
+            <img class="category_img" src="./asstets/images/category1.png" alt="">
+            <p class="category_text">Витамины для кошек</p>
+          </div>
+          <div class="category_card">
+            <img class="category_img" src="./asstets/images/category2.png" alt="">
+            <p class="category_text">Витамины для щенков</p>
+          </div>
+          <div class="category_card">
+            <img class="category_img" src="./asstets/images/category3.png" alt="">
+            <p class="category_text">Для лошадей витамины</p>
+          </div>
+          <div class="category_card">
+            <img class="category_img" src="./asstets/images/category4.png" alt="">
+            <p class="category_text">Витамины для крупного рогатого скота </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog" id="product">
+      <div class="container">
+        <h2 class="title">Каталог продуктов</h2>
+        <div class="catalog_box">
+          <div class="catalog_card">
+            <img class="catalog_img" src="./asstets/images/catalog1.png" alt="">
+            <p class="catalog_subtitle">Нобилис® IB 4-91 (по технологии Sphereon®)</p>
+            <p class="catalog_text">Вакцина против инфекционного бронхита кур живая сухая</p>
+            <a class="catalog_link" href="#!">Узнать больше</a>
+          </div>
+          <div class="catalog_card">
+            <img class="catalog_img" src="./asstets/images/catalog1.png" alt="">
+            <p class="catalog_subtitle">Нобилис® IB 4-91 (по технологии Sphereon®)</p>
+            <p class="catalog_text">Вакцина против инфекционного бронхита кур живая сухая</p>
+            <a class="catalog_link" href="#!">Узнать больше</a>
+          </div>
+          <div class="catalog_card">
+            <img class="catalog_img" src="./asstets/images/catalog1.png" alt="">
+            <p class="catalog_subtitle">Нобилис® IB 4-91 (по технологии Sphereon®)</p>
+            <p class="catalog_text">Вакцина против инфекционного бронхита кур живая сухая</p>
+            <a class="catalog_link" href="#!">Узнать больше</a>
+          </div>
+          <div class="c_card">
+            <a class="c_link" href="#!">Смотреть все <img src="./asstets/images/prev.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="specialist">
+      <h2 class="specialist_title">Наши Специалисты</h2>
+      <div class="specialist_box">
+        <div class="specialist_card">
+          <img class="specialist_img" src="./asstets/images/specialist1.png" alt="">
+          <h4 class="specialist_subtitle">Терапевт</h4>
+          <p class="specialist_text">-Почему питомец плохо ест?
+            - У него тусклая шерсть и
+            неприятный запах изо рта.
+            - В последнее время он совсем не
+            играет и даже ни на что не
+            реагирует.
+            - Он кашляет, неужели у него
+            простуда?
+            На такие и многие другие
+            волнующие вас вопросы ответит и
+            назначит правильное лечение
+            терапевт.
+          </p>
+        </div>
+        <div class="specialist_card">
+          <img class="specialist_img" src="./asstets/images/specialist2.png" alt="">
+          <h4 class="specialist_subtitle">Стоматолог</h4>
+          <p class="specialist_text">За чистотой пасти животного
+            необходимо следить также
+            тщательно, как и за его питанием.
+            Чистка зубов ультразвуком –
+            безопасная и безболезненная
+            процедура, которая поможет
+            содержать зубки в чистоте и
+            порядке.
+          </p>
+        </div>
+        <div class="specialist_card">
+          <img class="specialist_img" src="./asstets/images/specialist3.png" alt="">
+          <h4 class="specialist_subtitle">Офтальмолог</h4>
+          <p class="specialist_text">Выявление патологии глаз, лечение
+            и профилактика глазных
+            заболеваний – задача наших
+            квалифицированных офтальмологов.
+            Пусть ваш питомец видит
+            окружающий мир в самых ярких
+            красках!
+          </p>
+        </div> 
+        <div class="specialist_card">
+          <img class="specialist_img" src="./asstets/images/specialist4.png" alt="">
+          <h4 class="specialist_subtitle">Хирург</h4>
+          <p class="specialist_text">Говоря о кастрации,
+            профессиональная хирургия дает
+            возможность сделать жизнь
+            удобней, а в случае заболеваний –
+            облегчить состояние животного
+          </p>
+        </div> 
+        <div class="specialist_card">
+          <img class="specialist_img" src="./asstets/images/specialist5.png" alt="">
+          <h4 class="specialist_subtitle">Дерматолог</h4>
+          <p class="specialist_text">Нежная кожа животных подобна
+            коже младенцев. Высыпания,
+            покраснения, волдыри, шелушение
+            – весьма неприятные факторы,
+            сигнализирующие о срочном визите
+            любимца к дерматологу!
+          </p>
+        </div> 
+      </div>
+    </section>
+  </main>
+
+
+  <script src="./asstets/js/select.js"></script>
+  <script src="./asstets/js/slider.js"></script>
+  <script src="./asstets/js/navbar.js"></script>
+</body>
+
+</html>
