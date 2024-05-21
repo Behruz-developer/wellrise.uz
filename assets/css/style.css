@@ -33,8 +33,7 @@
 
 .nav {
     width: 100%;
-    padding: 20px 0;
-    /* background: #f2f2f3; */
+    /* padding: 20px 0; */
     position: fixed;
     z-index: 1;
     background: unset;
@@ -75,6 +74,9 @@
     display: inline-flex;
 }
 .nav_link:hover{
+    color: rgba(255, 255, 255, 0.766);
+  }
+  .nav.scrolled .nav_link:hover{
     color: #134236;
   }
 .nav.scrolled .nav_link {
@@ -82,6 +84,7 @@
 }
 
 .selector_box {
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -103,6 +106,12 @@
     align-items: center;
     justify-content: center;
 
+}
+.nav.scrolled .option{
+    color: black;
+}
+.nav.scrolled .option:hover{
+    color: #134236;
 }
 .option:nth-of-type(2){
     border-top: 1px solid grey;
@@ -131,7 +140,11 @@
     border-bottom-left-radius: 10px;
     left: -15px;
 }
-
+.nav.scrolled .options{
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 39px;
+    color: black;
+}
 .globe {
     color: white;
     cursor: pointer;
@@ -151,6 +164,23 @@
     line-height: 23.04px;
     letter-spacing: 2.303999900817871px;
     color: white;
+    transition: background 0.3s ease-out;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.nav.scrolled .nav_contact{
+    transition: background 0.3s ease-out;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.nav_contact:hover {
+    background-position: left bottom;
+}
+.nav.scrolled .nav_contact:hover{
+    background-position: left bottom;
+
 }
 
 .nav.scrolled .nav_contact {
@@ -161,25 +191,28 @@
 
 .nav_item {
     position: relative;
+    padding: 39px 0;
     display: inline-block; /* Agar nav menyularingiz bir qatorda bo'lishini xohlasangiz */
   }
   
   .dropdown_content {
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.8);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     display: none; 
-    left: -20px; 
   }
-  
+  .nav.scrolled .dropdown_content{
+    margin-top: 39px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
   .nav_item:hover .dropdown_content {
     display: flex; 
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     text-decoration: none;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -190,10 +223,13 @@
     line-height: 23.04px;
     letter-spacing: 2.303999900817871px;
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
 }
-  .nav_link2:hover{
+.nav.scrolled .nav_link2{
+    color: black;
+}
+.nav.scrolled .nav_link2:hover{
     color: #134236;
   }
 
@@ -216,6 +252,13 @@
 }
 
 @media (max-width:1200px) {
+    .nav {
+        /* width: 100%; */
+        padding: 20px 0;
+    }
+    .nav_item {
+        padding:  0;
+    }
     .header {
         position: relative;
     }
@@ -644,6 +687,8 @@
 }
 
 .category_card {
+    text-decoration: none;
+    color: black;
     max-width: 290px;
     width: 100%;
     background: white;
@@ -731,12 +776,7 @@
     color: white;
 }
 
-.c_card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-}
+
 
 .c_link {
     display: flex;
@@ -972,6 +1012,7 @@
 }
 
 .news_card {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 25px;
