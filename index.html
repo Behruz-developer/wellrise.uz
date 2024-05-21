@@ -296,7 +296,7 @@
         </div>
       </div>
     </section>
-    <section class="form">
+    <form id="myForm" class="form">
       <div class="container">
         <h2 class="title2">Форма Сообщений</h2>
         <p class="subtitle2">Вы можете отправить сообщение или свой отзыв, а также записаться на прием.</p>
@@ -307,16 +307,17 @@
           </div>
           <div class="form_input">
             <p class="form_text">Телефон<span>*</span></p>
-            <input class="input" type="number" placeholder="+998 (99) 123-45-67" required>
+            <input class="input" type="tel" placeholder="+998 (99) 123-45-67" pattern="^\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}$" required>
           </div>
           <div class="form_textarea">
             <p class="form_text">Сообщение<span>*</span></p>
-            <textarea class="textarea" type="text" required></textarea>
+            <textarea class="textarea" required></textarea>
           </div>
         </div>
-        <a href="#!" class="form_link">ОТПРАВИТЬ СООБЩЕНИЕ</a>
+        <button type="submit" class="form_link">ОТПРАВИТЬ СООБЩЕНИЕ</button>
       </div>
-    </section>
+    </form>
+    
     <section class="map">
       <h2 class="title2">Адрес</h2>
       <p class="subtitle2">Мы находимся по адресу г. Ташкент ул. Мирабад, 33</p>

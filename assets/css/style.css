@@ -1204,6 +1204,7 @@
     letter-spacing: 2px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 @media (max-width:1000px) {
