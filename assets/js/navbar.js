@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     window.onscroll = function () {
       var nav = document.querySelector(".nav");
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 1) {
         nav.classList.add("scrolled");
       } else {
         nav.classList.remove("scrolled");
