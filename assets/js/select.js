@@ -1,48 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
   var selectorBox = document.querySelector('.selector_box');
-  var globeIcon = document.querySelector('.globe'); // Globe iconni tanlash
   var languageOptions = document.getElementById("languageOptions");
 
-  // Selector box va globe icon uchun event listener qo'shish
-  selectorBox.addEventListener('click', function(event) {
-    toggleDropdown(event);  // Eventni toggleDropdown funksiyasiga uzatish
-  });
-
-  globeIcon.addEventListener('click', function(event) {
-    toggleDropdown(event);  // Eventni toggleDropdown funksiyasiga uzatish
-  });
+  selectorBox.addEventListener('click', toggleDropdown);
 
   function toggleDropdown(event) {
-    event.stopPropagation(); // Boshqa elementlarga voqea tarqalishini to'xtatish
-    if (languageOptions.style.display === "none" || !languageOptions.style.display) {
-      languageOptions.style.display = "block";
-      document.addEventListener('click', closeDropdownOnOutsideClick, true);
-    } else {
-      languageOptions.style.display = "none";
-      document.removeEventListener('click', closeDropdownOnOutsideClick, true);
-    }
+    event.stopPropagation();
+    languageOptions.style.display = (languageOptions.style.display === "block") ? "none" : "block";
+    document.addEventListener('click', closeDropdownOnOutsideClick, true);
   }
 
-  function selectLanguage(language) {
+  var options = document.querySelectorAll(".option");
+  options.forEach(function(option) {
+    option.addEventListener('click', function() {
+      selectLanguage(this.textContent);
+    });
+  });
+
+  function selectLanguage(newLanguage) {
     var selected = document.querySelector(".selected");
-    var options = document.querySelectorAll(".option");
-
-    // Tanlangan tilni yangilash
     var currentLanguage = selected.textContent;
-    selected.textContent = language;
+    selected.textContent = newLanguage; // Yangi tanlangan tilni asosiy til o'rniga qo'yish
 
-    // Barcha variantlarni ko'rsatish va tanlangan tilni almashtirish
     options.forEach(option => {
-        if (option.textContent === language) {
-            option.textContent = currentLanguage;
-        }
+      if (option.textContent === newLanguage) {
+        option.textContent = currentLanguage; // Avvalgi tanlangan tilni ro'yxatga qo'shish
+      }
     });
 
-    toggleDropdown();  
+    languageOptions.style.display = "none"; // Dropdownni yopish
+    document.removeEventListener('click', closeDropdownOnOutsideClick, true); // Voqealarni tinglashni tozalash
   }
 
   function closeDropdownOnOutsideClick(event) {
-    if (!selectorBox.contains(event.target) && !globeIcon.contains(event.target)) {
+    if (!selectorBox.contains(event.target)) {
       languageOptions.style.display = 'none';
       document.removeEventListener('click', closeDropdownOnOutsideClick, true);
     }

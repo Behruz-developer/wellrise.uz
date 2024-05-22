@@ -193,16 +193,19 @@
     position: relative;
     padding: 39px 0;
     display: inline-block; /* Agar nav menyularingiz bir qatorda bo'lishini xohlasangiz */
-  }
+  
+}
   
   .dropdown_content {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
-    min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    width: 160px;
+    left: 0;
     z-index: 1;
     display: none; 
-  }
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;  
+}
   .nav.scrolled .dropdown_content{
     margin-top: 39px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -211,11 +214,8 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    /* padding: 10px 0; */
     text-decoration: none;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+
   }
   .nav_link2{
     border-top: 1px solid grey;
@@ -244,7 +244,6 @@
     .nav_list {
         gap: 40px;
     }
-
 }
 
 @media (max-width:1450px) {
@@ -273,7 +272,10 @@
     .nav_box {
         align-items: start;
     }
-
+    .nav_link2{
+        color: black;
+        max-width: 160px;
+    }
     .nav_list {
         max-width: 400px;
         width: 100%;
@@ -297,6 +299,10 @@
 
     .nav.scrolled .nav_link {
         color: white;
+
+    }
+    .nav.scrolled .nav_link:hover {
+        color: rgba(255, 255, 255, 0.813)
 
     }
 
@@ -326,6 +332,26 @@
         top: 15px;
         right: 20px;
     }
+    .dropdown_content {
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        position: static;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+    
+      .nav.scrolled .dropdown_content {
+        margin-top: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+      .dropdown_toggle:active + .dropdown_content,
+      .dropdown_toggle:focus + .dropdown_content {
+        display: flex;
+      }
 
 }
 
@@ -643,7 +669,7 @@
 
 .category {
     background-color: #FAFAFA;
-    padding: 9px 0px 70px 0px;
+    padding: 90px 0px 70px 0px;
 }
 
 .title_card {
@@ -725,7 +751,7 @@
 
 /* catalog  */
 .catalog {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .catalog_box {
@@ -800,30 +826,34 @@
 
 @media (max-width:1300px) {
     .catalog {
-        margin-top: 90px;
+        padding-top: 90px;
     }
 }
 
 @media (max-width:1200px) {
     .catalog {
-        margin-top: 80px;
+        padding-top: 80px;
     }
 
     .catalog_box {
         gap: 40px;
         padding-bottom: 80px;
     }
+    .catalog_subtitle,
+    .catalog_text{
+        text-align: center;
+    }
 }
 
 @media (max-width:1100px) {
     .catalog {
-        margin-top: 70px;
+        padding-top: 70px;
     }
 }
 
 @media (max-width:1000px) {
     .catalog {
-        margin-top: 60px;
+        padding-top: 60px;
     }
 
     .catalog_box {
@@ -835,7 +865,7 @@
 
 @media (max-width:900px) {
     .catalog {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     .catalog_box {
@@ -1000,7 +1030,8 @@
     text-align: left;
 }
 
-.news_link {
+.news_link,
+.news_link2 {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -1010,12 +1041,19 @@
     font-weight: 700;
     line-height: 13.8px;
 }
-
+.news_link2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
 .news_box {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     gap: 65px;
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .news_card {
@@ -1080,6 +1118,14 @@
 @media (max-width:1200px) {
     .news_box {
         gap: 45px;
+        position: relative;
+
+    }
+    .news_link2{
+       display: block;
+    }
+    .news_link{
+        display: none;
     }
 }
 
@@ -1223,6 +1269,10 @@
     .form {
         margin-top: 70px;
     }
+    .form_box{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
 
 @media (max-width:600px) {
@@ -1350,6 +1400,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .form_input{
+        width: 100%;
     }
 }
 

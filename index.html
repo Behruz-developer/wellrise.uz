@@ -26,32 +26,32 @@
             <label class="close_btn"><i class="fa fa-close"></i></label>
             <li><a href="#about" class="nav_link">О нас </a></li>
             <li class="nav_item">
-              <a href="#category" class="nav_link dropdown_toggle">Категории</a>
+              <a href="#!" class="nav_link dropdown_toggle">Категории</a>
               <div class="dropdown_content">
-                <a class="nav_link2" href="#category1">Витамины для кошек</a>
-                <a class="nav_link2" href="#category2">Витамины для щенков</a>
-                <a class="nav_link2" href="#category3">Для лошадей витамины</a>
+                <a class="nav_link2" href="#category">Витамины для кошек</a>
+                <a class="nav_link2" href="#category">Витамины для щенков</a>
+                <a class="nav_link2" href="#category">Для лошадей витамины</a>
               </div>
             </li>
             <li class="nav_item">
-              <a href="#product" class="nav_link dropdown_toggle">продукты</a>
+              <a href="#!" class="nav_link dropdown_toggle">продукты</a>
               <div class="dropdown_content">
-                <a class="nav_link2" href="#product1">Нобилис®IB </a>
-                <a class="nav_link2" href="#product2">Нобилис®IB </a>
-                <a class="nav_link2" href="#product3">Нобилис®IB </a>
+                <a class="nav_link2" href="#product">Нобилис®IB </a>
+                <a class="nav_link2" href="#product">Нобилис®IB </a>
+                <a class="nav_link2" href="#product">Нобилис®IB </a>
               </div>
             </li>
             
             <li><a href="#comand" class="nav_link">НАША КОМАНДА</a></li>
             <li><a href="#news" class="nav_link">Новости</a></li>
             <div class="language-selector">
-              <div class="selector_box " onclick="toggleDropdown()">
+              <div class="selector_box" onclick="toggleDropdown(event)"> <!-- Ensure onclick has 'event' passed -->
                   <div class="selected">UZ</div>
                   <label class="globe" for="check"><i class="fa fa-globe"></i></label>
               </div>
               <div class="options" id="languageOptions" style="display: none;">
-                  <div class="option" onclick="selectLanguage('EN')">EN</div>
-                  <div class="option" onclick="selectLanguage('RU')">RU</div>
+                  <div class="option">EN</div> <!-- Removed inline onclick to manage in JS -->
+                  <div class="option">RU</div> <!-- Removed inline onclick to manage in JS -->
               </div>
           </div>
           
@@ -237,7 +237,6 @@
         <div class="news_link_card">
           <h2 class="news_title">ПОПУЛЯРНЫЕ НОВОСТИ</h2>
           <a class="news_link" href="#!">Смотреть все <img src="./assets/images/prev.svg" alt=""></a>
-
         </div>
         <div class="news_box">
           <a href="#!" class="news_card">
@@ -293,7 +292,10 @@
               посетили жители не только…
             </p>
           </a>
+          <a class="news_link2" href="#!">Смотреть все <img src="./assets/images/prev.svg" alt=""></a>
+
         </div>
+
       </div>
     </section>
     <form id="myForm" class="form">
@@ -363,6 +365,7 @@
   <script src="./assets/js/slider.js"></script>
   <script src="./assets/js/navbar.js"></script>
   <script src="./assets/js/modal.js"></script>
+  <script src="./assets/js/dropdown.js"></script>
 </body>
 
 </html>
