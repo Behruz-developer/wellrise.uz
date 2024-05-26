@@ -13,23 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
   var options = document.querySelectorAll(".option");
   options.forEach(function(option) {
     option.addEventListener('click', function() {
-      selectLanguage(this.textContent);
+      selectLanguage(this.dataset.lang);
     });
   });
 
   function selectLanguage(newLanguage) {
     var selected = document.querySelector(".selected");
-    var currentLanguage = selected.textContent;
-    selected.textContent = newLanguage; // Yangi tanlangan tilni asosiy til o'rniga qo'yish
-
-    options.forEach(option => {
-      if (option.textContent === newLanguage) {
-        option.textContent = currentLanguage; // Avvalgi tanlangan tilni ro'yxatga qo'shish
-      }
-    });
-
-    languageOptions.style.display = "none"; // Dropdownni yopish
-    document.removeEventListener('click', closeDropdownOnOutsideClick, true); // Voqealarni tinglashni tozalash
+    var currentLanguage = selected.dataset.lang;
+    if (currentLanguage !== newLanguage) {
+      // Avvalgi tanlangan tilni yangi tanlangan til joyiga ko'chirish
+      var newSelectedOption = document.querySelector(`.option[data-lang="${newLanguage}"]`);
+      newSelectedOption.textContent = currentLanguage.toUpperCase();
+      newSelectedOption.dataset.lang = currentLanguage;
+      
+      // Yangi tanlangan tilni "selected"ga o'tkazish
+      selected.textContent = newLanguage.toUpperCase();
+      selected.dataset.lang = newLanguage;
+      
+      languageOptions.style.display = "none"; // Dropdownni yopish
+      document.removeEventListener('click', closeDropdownOnOutsideClick, true); // Voqealarni tinglashni tozalash
+    }
   }
 
   function closeDropdownOnOutsideClick(event) {

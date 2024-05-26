@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header class="header" id="home">
+        <nav class="nav">
+          <input type="checkbox" id="check">
+    
+          <div class="container">
+            <div class="nav_box">
+              <a href="index.html" class="logo">
+                <img src="./assets/images/logo.png" alt="">
+              </a>
+              <label class="open_btn" for="check"><i class="  fa fa-bars"></i></label>
+    
+              <ul class="nav_list">
+                <label class="close_btn"><i class="fa fa-close"></i></label>
+                <li><a href="index.html" class="nav_link lang" key="about"></a></li>
+                <li class="nav_item">
+                  <div class="nav_item_card">
+                    <a href="#!" class="nav_link dropdown_toggle lang" key="category"></a>
+                    <div class="dropdown_content">
+                      <a class="nav_link2 lang" key="category1" href="all_category.html"></a>
+                      <a class="nav_link2 lang" key="category2" href="all_category"></a>
+                      <a class="nav_link2 lang" key="category3" href="all_category"></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav_item">
+                  <div class="nav_item_card">
+                    <a href="#!" class="nav_link dropdown_toggle lang" key="product"></a>
+                    <div class="dropdown_content">
+                      <a class="nav_link2 lang" key="product1" href="all_product.html"></a>
+                      <a class="nav_link2 lang" key="product2" href="all_product"></a>
+                      <a class="nav_link2 lang" key="product3" href="all_product"></a>
+                    </div>
+                  </div>
+    
+                </li>
+    
+                <li><a href="index.html#comand" class="nav_link lang" key="comand"></a></li>
+                <li><a href="all_news.html" class="nav_link lang" key="news"></a></li>
+                <div class="language-selector">
+                  <div class="selector_box" onclick="toggleDropdown(event)">
+                    <div class="selected lang-button" data-lang="ru">RU</div>
+                    <label class="globe" for=""><i class="fa fa-globe"></i></label>
+                  </div>
+                  <div class="options" id="languageOptions" style="display: none;">
+                    <div class="option lang-button" data-lang="en">EN</div>
+                    <div class="option lang-button" data-lang="uz">UZ</div>
+                  </div>
+                </div>
+    
+                <a href="tel:+998935377330" class="nav_contact lang" key="contact"></a>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="main-carousel" id="home">
+          <div class="carousel">
+            <div class="items">
+              <div class="img_card carousel-image current">
+                <img src="assets/images/bg-2.png" alt="" class=" " />
+                <div class="img_text">
+                  <h3 class="lang" key="vitamin_img"> </h3>
+                </div>
+              </div>
+    
+              <div class="img_card carousel-image ">
+                <img src="assets/images/bg-1.jpg" alt="" class=" " />
+                <div class="img_text">
+                  <h3 class="lang" key="vitamin_img"></h3>
+                </div>
+              </div>
+    
+              <div class="img_card carousel-image ">
+                <img src="assets/images/bg-3.jpg" alt="" class=" " />
+                <div class="img_text">
+                  <h3 class="lang" key="vitamin_img"></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <i class="fa fa-chevron-left fa-3x" id="prevBtn"></i>
+            <i class="fa fa-chevron-right fa-3x" id="nextBtn"></i>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="product">
+            <div class="container">
+                <div class="product_box">
+                    <div class="product_information_card">
+                        <h2 class="product_title">Порцилис® Ery+Parvo (Porcilis® Ery+Parvo)</h2>
+                        <img class="product_img" src="./assets/images/product1.png" alt="">
+                        <div class="information_text_card">
+                            <p class="information_subtitle">Вакцина против рожи и парвовирусной инфекции свиней инактивированная</p>
+                            <div class="border"></div>
+                            <p class="information_subtitle">Состав</p>
+                            <p class="information_text">Одна доза вакцины (2 мл) содержит действующие вещества: инактивированный парвовирус свиней
+                                (штамм 014) – не менее 552 единиц ИФА  и инактивированные бактериальные клетки rhusiopathiae  (штамм М2, серотип 2) – не менее 1 ЗДС и вспомогательные вещества: dl-α-токоферол ацетат, полисорбат 80, трис(гидроксиметил) аминометан, натрия хлорид, симетикон, формальдегид,
+                                воду для инъекций.
+                            </p>
+                            <p class="information_subtitle">Показания к применению</p>
+                            <p class="information_text">Вакцина предназначена для активной иммунизации свиноматок и ремонтных свинок против рожи
+                                свиней, а также для защиты эмбрионов и плодов от парвовирусной инфекции свиней.
+                            </p>
+                            <p class="information_subtitle">Лекарственная форма</p>
+                            <p class="information_text">Суспензия для инъекций.</p>
+                            <p class="information_subtitle">Способ введения</p>
+                            <p class="information_text">Внутримышечно</p>
+                            <p class="information_subtitle">Форма выпуска</p>
+                            <p class="information_text">Вакцина расфасована по 20 мл (10 доз), 50 мл (25 доз) или 100 мл (50 доз) в стеклянные или
+                                пластиковые флаконы, укупоренные резиновыми пробками, укрепленными алюминиевыми
+                                колпачками. По 1 флакону с вакциной помещают в картонную коробку с вложением инструкции по
+                                применению вакцины на русском языке.
+                            </p>
+                            <p class="information_subtitle">Условия хранения</p>
+                            <p class="information_text">Хранить в защищенном от света месте при температуре от 2 до 8°С.
+                                Не замораживать.
+                            </p>
+                            <p class="information_subtitle">Срок годности</p>
+                            <p class="information_text">Срок годности вакцины в закрытой упаковке производителя составляет
+                                24 месяца с даты выпуска.
+                            </p>
+                            <p class="product_link">Инструкция по применению Порцилис® Ery+Parvo (Porcilis® Ery+Parvo)</p>
+                        </div>
+                    </div>
+                    <div class="product_left">
+                        <div class="catalog_card">
+                            <img class="catalog_img" src="./assets/images/catalog1.png" alt="">
+                            <p class="catalog_subtitle lang" key="product_title"></p>
+                            <p class="catalog_text lang" key="product_text"></p>
+                            <a href="all_product.html" class="catalog_link lang" key="product_link"></a>
+                          </div>
+                          <div class="catalog_card">
+                            <img class="catalog_img" src="./assets/images/catalog1.png" alt="">
+                            <p class="catalog_subtitle lang" key="product_title"></p>
+                            <p class="catalog_text lang" key="product_text"></p>
+                            <a href="all_product" class="catalog_link lang" key="product_link"></a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form id="myForm" class="form">
+            <div class="container">
+              <h2 class="title2 lang" key="form_title"></h2>
+              <p class="subtitle2 lang" key="form_subtitle"></p>
+              <div class="form_box">
+                <div class="form_input">
+                  <div class="form_text_card">
+                    <p class="form_text lang" key="form_name"></p> <span>*</span>
+                  </div>
+                  <input class="input" type="text" required>
+                </div>
+                <div class="form_input">
+                  <div class="form_text_card">
+                    <p class="form_text lang" key="form_phone"></p> <span>*</span>
+                  </div>
+                  <input class="input" type="number" placeholder="+998 (99) 123-45-67" required>
+                </div>
+                <div class="form_textarea">
+                  <div class="form_text_card">
+                    <p class="form_text lang" key="form_sms"></p> <span>*</span>
+                  </div>
+                  <textarea class="textarea" required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="form_link lang" key="form_link"></button>
+            </div>
+          </form>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_box">
+            <a href="#home" id="home">
+              <img src="./assets/images/logo.png" alt="" class="logo">
+            </a>
+            <div class="footer_card">
+              <h2 class="footer_title lang" key="footer_text1"></h2>
+              <p class="footer_text lang" key="footer_text2"></p>
+            </div>
+            <div class="footer_card">
+              <h2 class="footer_title lang" key="footer_text3"></h2>
+              <a href="tel:+998935377330" class="footer_text lang" key="footer_text4"></a>
+              <a href="#!" class="footer_text lang" key="footer_text5"></a>
+            </div>
+            <div class="footer_card">
+              <h2 class="footer_title lang" key="footer_text6"></h2>
+              <a href="tel:+998935377330" class="footer_link lang" key="telegram"></a>
+              <a href="#!" class="footer_link lang" key="instagram"></a>
+              <a href="#!" class="footer_link lang" key="facebook"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="footer_end">
+        <p>© 2023 Powered by</p>
+        <a href="#!"><img src="./assets/images/logo5.png" alt=""></a>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Ваш запрос отправлен✅</p>
+        </div>
+      </div>
+
+      
+      <script src="./assets/js/select.js"></script>
+      <script src="./assets/js/slider.js"></script>
+      <script src="./assets/js/navbar.js"></script>
+      <script src="./assets/js/modal.js"></script>
+      <script src="./assets/js/dropdown.js"></script>
+      <script src="./assets/js/lang.js"></script>
+</body>
+</html>
