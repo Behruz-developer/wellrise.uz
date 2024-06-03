@@ -4,23 +4,37 @@ document.addEventListener('DOMContentLoaded', function() {
     var span = document.getElementsByClassName("close")[0];
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Formaning tabiiy yuborilishini to'xtatamiz
+        event.preventDefault();
         if (form.checkValidity()) {
-            modal.style.display = "flex"; // Forma to'g'ri to'ldirilgan bo'lsa, modalni ko'rsatamiz
+            modal.style.opacity = 1;
+            modal.style.visibility = "visible"; 
+            setTimeout(function() {
+                var fadeEffect = setInterval(function() {
+                    if (!modal.style.opacity) {
+                        modal.style.opacity = 1;
+                    }
+                    if (modal.style.opacity > 0) {
+                        modal.style.opacity -= 0.1;
+                    } else {
+                        clearInterval(fadeEffect);
+                        modal.style.visibility = "hidden"; 
+                    }
+                }, 100); 
+            }, 3000);
         } else {
-            alert("Formani to'liq to'ldiring!"); // Forma noto'g'ri to'ldirilgan bo'lsa, xabarnoma chiqaramiz
+            alert("Formani to'liq to'ldiring!"); 
         }
     });
 
-    // Yopish tugmasi bosilganda modal oynani yopish
     span.onclick = function() {
-        modal.style.display = "none";
+        modal.style.opacity = 0;
+        modal.style.visibility = "hidden";
     }
 
-    // Foydalanuvchi modal oynadan tashqariga bosganda, uni yopish
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            modal.style.opacity = 0;
+            modal.style.visibility = "hidden";
         }
     }
 });
