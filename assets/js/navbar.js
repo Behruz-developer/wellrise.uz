@@ -76,4 +76,5 @@ document.addEventListener("DOMContentLoaded", function () {
       closeAllDropdowns();
     }
   });
+  AOS.init();
 });
