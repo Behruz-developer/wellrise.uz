@@ -371,11 +371,13 @@ const langElements = document.querySelectorAll('.lang');
 function changeLanguage(language) {
   selectedLanguage = language;
   langElements.forEach(el => {
-      const key = el.getAttribute('key');
-      if (key && langData[selectedLanguage][key]) {
-          el.textContent = langData[selectedLanguage][key];
-      }
+    const key = el.getAttribute('key');
+    if (key && langData[selectedLanguage][key]) {
+      el.textContent = langData[selectedLanguage][key];
+    }
   });
+  resetTypewriter();
+  typeWriter();
 }
 
 let selectedLanguage = 'ru';
@@ -383,11 +385,51 @@ changeLanguage(selectedLanguage); // Dastlabki tilni belgilash
 
 document.querySelectorAll('.lang-button').forEach(btn => {
   btn.addEventListener('click', function() {
-      const newLang = btn.dataset.lang;
-      if (newLang !== selectedLanguage) {
-          changeLanguage(newLang);
-          document.querySelector('.selected').textContent = newLang.toUpperCase();
-          selectedLanguage = newLang;
-      }
+    const newLang = btn.dataset.lang;
+    if (newLang !== selectedLanguage) {
+      changeLanguage(newLang);
+      document.querySelector('.selected').textContent = newLang.toUpperCase();
+      selectedLanguage = newLang;
+    }
   });
+});
+
+var i = 0;
+var j = 0;
+var txt = langData[selectedLanguage].text_about3;
+var txt2 = langData[selectedLanguage].text_about18;
+var speed = 50;
+
+function resetTypewriter() {
+  i = 0;
+  j = 0;
+  document.getElementById("about_text").innerHTML = "";
+  document.getElementById("about_text2").innerHTML = "";
+  txt = langData[selectedLanguage].text_about3;
+  txt2 = langData[selectedLanguage].text_about18;
+}
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("about_text").innerHTML += txt.charAt(i);
+    i++;
+  }
+  if (j < txt2.length) {
+    document.getElementById("about_text2").innerHTML += txt2.charAt(j);
+    j++;
+  }
+  if (i < txt.length || j < txt2.length) {
+    setTimeout(typeWriter, speed);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting === true) {
+      typeWriter();
+      observer.unobserve(document.getElementById('about_text'));
+    }
+  }, { threshold: [0.5] });
+
+  observer.observe(document.getElementById('about_text'));
 });
