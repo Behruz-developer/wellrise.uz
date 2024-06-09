@@ -190,7 +190,7 @@ const langData = {
       "footer_text6": "Cоциальные Сети:", 
       "telegram": "Телеграм-канал", 
       "instagram": "Инстаграм", 
-      "facebook": "Фейсбук", 
+      "facebook": "Фейсбукy", 
       "vitamin_img": "Категория - Витамины для кошек", 
       "product_text1": "Порцилис® Ery+Parvo (Porcilis® Ery+Parvo)",
       "product_text2": "Вакцина против рожи и парвовирусной инфекции свиней инактивированная",
@@ -252,7 +252,7 @@ const langData = {
     "product1": "Nobilis®IB", 
     "product2": "Nobilis®IB", 
     "product3": "Nobilis®IB", 
-    "comand": "our team", 
+    "comand": "Our team", 
     "news": "News", 
     "contact": "Contact", 
     "navimage1": "Animal vaccination", 
@@ -300,7 +300,7 @@ const langData = {
     "form_name": "Name", 
     "form_phone": "Telephone", 
     "form_sms": "Message", 
-    "form_link": "send a message", 
+    "form_link": "Send a message", 
     "map_title": "Address", 
     "map_subtitle": "We are located at 33 Mirabad Street, Tashkent", 
     "footer_text1": "Address:", 
@@ -308,10 +308,10 @@ const langData = {
     "footer_text3": "Contacts:", 
     "footer_text4": "Phone (mobile) : +998 93 537-73-30", 
     "footer_text5": "Email address: wellrise@gmail.com", 
-    "footer_text6": "social network:", 
+    "footer_text6": " Social network:", 
     "telegram": "Telegram Channel", 
     "instagram": "Instagram", 
-    "facebook": "fecbook", 
+    "facebook": "Fecbook", 
     "vitamin_img": "Category - Vitamins for cats", 
     "product_text1": "Porcilis® Ery+Parvo (Porcilis® Ery+Parvo)",
     "product_text2": "Vaccine against erysipelas and swine parvovirus infection inactivated",
@@ -341,9 +341,9 @@ const langData = {
     "news_text8": "2. Romanov N., Flesher V., Trip S., Sparber F., Ebner S. and Stoitsner P. Targeting of dendritic skin cells to improve intradermal vaccination. Current topics in Microbiology and Immunology, 2012. 351:113-138.",
     "news_text9": "3. Teunissen M., Hanifa M. and Colin M. Introduction to human skin immunobiology and functional specificity of subsets of dendritic skin cells for innovative design of intradermal vaccination. Current topics in microbiology and Immunology, 2012. 351:25-76.",
     "modal": "Your request has been sent✅", 
-    "text_about1": "Wur mission and values", 
+    "text_about1": "Oe strive to ensure the health and well-being of animals in livestock enterprises, farms and households. Our team of highly qualified specialists uses modern methods and technologies to improve the health of animals. We believe that taking care of animal health is taking care of the future, and that is why we strive to maintain the highest standards of veterinary care.", 
     "text_about3": "Welcome to WELLRISE! Our company was founded in 2017 and has been successfully developing since then, providing a wide range of veterinary services for enterprises and farms in the field of animal husbandry. We are proud of our partnership with such international companies as Zoetis, Tanin Sevnica, Neofarma, MG2MIX, Not-Feed, representing their interests in Uzbekistan and offering advanced solutions in the field of veterinary and animal science.", 
-    "text_about2": "Oe strive to ensure the health and well-being of animals in livestock enterprises, farms and households. Our team of highly qualified specialists uses modern methods and technologies to improve the health of animals. We believe that taking care of animal health is taking care of the future, and that is why we strive to maintain the highest standards of veterinary care.", 
+    "text_about2": "Wur mission and values ", 
     "text_about4": "Our services", 
     "text_about5": "• Pdvice and assistance: Our experts advise farmers and legal entities on the optimal care of animals, improving their condition and increasing the efficiency of farms.", 
     "text_about7": "• Dreventive vaccination and treatment for farms: We provide comprehensive vaccination and treatment programs aimed at improving the health of farm animals and increasing their productivity.", 
@@ -381,7 +381,7 @@ function changeLanguage(language) {
 }
 
 let selectedLanguage = 'ru';
-changeLanguage(selectedLanguage); // Dastlabki tilni belgilash
+changeLanguage(selectedLanguage); 
 
 document.querySelectorAll('.lang-button').forEach(btn => {
   btn.addEventListener('click', function() {
